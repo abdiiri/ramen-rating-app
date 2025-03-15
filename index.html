@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramen Rating App</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+}
+
+#ramen-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#ramen-menu img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+#ramen-detail {
+  margin-top: 20px;
+}
+
+#ramen-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+    <link rel="stylesheet" href="styles.css">
+    </style>
+</head>
+
+<body>
+    <h1>Ramen Rating App</h1>
+
+    <!-- Ramen Menu Section -->
+    <div id="ramen-menu"></div>
+
+    <!-- Ramen Details Section -->
+    <div id="ramen-detail">
+        <h2>Ramen Details</h2>
+        <img id="detail-image" src="" alt="Ramen Image">
+        <p id="detail-name"></p>
+        <p id="detail-restaurant"></p>
+        <p id="detail-rating"></p>
+        <p id="detail-comment"></p>
+    </div>
+
+    <!-- Add New Ramen Form -->
+    <form id="ramen-form">
+        <input type="text" id="name" placeholder="Ramen Name" required>
+        <input type="text" id="restaurant" placeholder="Restaurant" required>
+        <input type="file" id="image" accept="image/*" required>
+        <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+        <textarea id="comment" placeholder="Comment"></textarea>
+        <button type="submit">Add Ramen</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
